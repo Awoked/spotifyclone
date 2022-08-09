@@ -1,0 +1,39 @@
+html,
+body{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.container-fluid{
+    height: 100vh;
+}
+.em12{
+    font-size: 1.2rem;
+}
+.em15{
+    font-size: 1.5rem;
+}
+.em2{
+    font-size: 2rem;
+}
+.nav-link:hover{
+    color: #f8f9fa!important;
+}
+.nav{
+    max-width: 227px;
+}
+.LeftNavSide{
+    position: sticky;
+    height: 80vh;
+    overflow-y: auto;
+}
+#soundBar{
+    height: 20vh;
+}
+#soundBar audio{
+    width: 500px;
+    height: 50px;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/style.css">
+        <style>
+            body{
+                overflow-y: scroll;
+            }
+            *{
+                text-decoration: none!important;
+            }
+            .Songs{
+                border-radius: 5px;
+            }
+            .Songs:hover{
+                background-color: #b1b1b163;
+            }
+            .banner{
+                background: url(../images/abstract-art-background-1037996.jpg);
+                width: 240px;
+                height: 240px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        </style>
+    </head>
+    <body class="bg-secondary">
+        <div class="container-fluid bg-secondary">
+            <div class="row">
+                <div class="col-12 d-flex flex-column pt-5 p-4">
+                    <div class="d-flex gap-3 text-light align-items-center ">
+                        <div class="banner"></div>
+                        <div class="d-flex flex-column ">
+                            <div class="d-flex flex-column">
+                                <h6 class="fw-bolder">Çalma Listesi</h6>
+                                <h1 class="fw-bolder">Playlist #1</h1>
+                            </div>
+                            <h5 class="d-flex gap-2 align-items-center " style="position: relative; bottom: -50px;">
+                                <div style="width: 32px; height: 32px;" class="bg-danger rounded-circle"></div>
+                                User
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 border-top pt-5 p-4 d-flex flex-column gap-3">
+                    <div class="Songs d-flex">
+                        <a href="#" onclick="song1()" class="d-flex gap-3  w-100">
+                            <img class="" src="../images/500x500.jpg" width="64px">
+                            <div class="text-light">
+                                <h2>Cant Stop</h2>
+                                <h6>Red Hot Chilli Peppers</h6>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const parentDocument = window.parent.document;
+            var song = parentDocument.querySelector('#audio');
+            let audio = parentDocument.querySelector('#audio');
+            let songImg = parentDocument.querySelector('.songImage');
+            let songName = parentDocument.querySelector('.songName');
+            let artistName = parentDocument.querySelector('.artistName');
+            song.onended = function() {
+                song.play();
+            }
+            function song1() {
+                audio.src = "../sound/red-hot-chili-peppers-cant-stop-official-music-video.mp3";
+                songImg.src = "images/500x500.jpg"
+                songName.innerHTML = "Cant Stop";
+                artistName.innerHTML = "Red Hot Chilli Peppers";
+                audio.play();
+            }
+            function song2() {
+                audio.src = "../sound/come-together-remastered-2009.mp3";
+                songImg.src = "images/ab67616d0000b273dc30583ba717007b00cceb25.jpg"
+                songName.innerHTML = "Come Together";
+                artistName.innerHTML = "The Beatles";
+                audio.play();
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    </body>
+</html>
